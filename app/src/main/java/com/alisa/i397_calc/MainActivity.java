@@ -130,26 +130,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void calculate() {
         MathOperation previousOperand = (MathOperation) input.get (ExpElement.OPERATOR);
-        double result;
         double a = getDouble(input.get(ExpElement.FIRST_OPERAND));
         double b = getDouble(input.get(ExpElement.SECOND_OPERAND));
-
-        switch (previousOperand){
-            case SUM:
-                result = a+b;
-                break;
-            case SUB:
-                 result = a - b;
-                break;
-            case MLT:
-                result = a*b;
-                break;
-            case DIV:
-                result= a/b;
-                break;
-            default:
-                result = 0;
-        }
+        double result = operate(previousOperand, a,b);
 
         // if result is integer, cut the ".0" part
         if (result % 1 == 0){
@@ -161,10 +144,26 @@ public class MainActivity extends AppCompatActivity {
         input.put(ExpElement.FIRST_OPERAND, result); // replace first operand with current result
     }
 
+    private Double operate(MathOperation operand, double a, double b) {
+        switch (operand) {
+            case SUM:
+                return a + b;
+            case SUB:
+                return a - b;
+            case MLT:
+                return a * b;
+            case DIV:
+                return a / b;
+        }
+        return null;
+    }
+
+
+
     private double getDouble(Object screenInput) {
         double result;
         try{
-           result = Double.valueOf(screenInput.toString()).doubleValue();
+           result = Double.valueOf(screenInput.toString());
         } catch (Exception e){
             screen.setText(error);
             e. printStackTrace();
