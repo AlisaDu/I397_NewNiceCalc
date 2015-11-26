@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.buttonEq:{
                 if (input.containsKey(ExpElement.FIRST_OPERAND) && input.containsKey(ExpElement.OPERATOR)) {
                     doTheMath();
-                    input.remove(ExpElement.OPERATOR);
+
                 }
                 break;
             }

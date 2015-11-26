@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+
+<android.support.percent.PercentRelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    tools:context=".MainActivity"
+    android:gravity="center">
+
 
     <EditText
         android:layout_width="wrap_content"
@@ -19,195 +28,197 @@
         android:cursorVisible="false"
         android:focusable="false"
         android:inputType="number|text|numberDecimal"
-        android:gravity="right" />
+        android:gravity="bottom|right"
+        app:layout_widthPercent="90%"
+        app:layout_heightPercent= "20%"/>
 
-    <TableLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:id="@+id/button1"
+        android:textSize="20sp"
+        android:onClick="buttonClick"
         android:layout_below="@+id/txtResult"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:stretchColumns="*"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/txtResult"
-        android:layout_alignRight="@+id/txtResult"
-        android:layout_alignEnd="@id/txtResult"
-        android:shrinkColumns="*">
+        app:layout_widthPercent="23%"
+        app:layout_heightPercent= "20%"/>
 
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/first_row"
-            android:layout_weight="1">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:id="@+id/button2"
+        android:textSize="20sp"
+        android:onClick="buttonClick"
+        android:layout_toRightOf="@id/button1"
+        android:layout_below="@+id/txtResult"
+        app:layout_widthPercent="23%"
+        app:layout_heightPercent= "20%"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="1"
-                android:id="@+id/button1"
-                android:layout_column="0"
-                android:textSize="20sp"
-                android:onClick="buttonClick" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:id="@+id/button3"
+        android:textSize="20sp"
+        android:onClick="buttonClick"
+        android:layout_toRightOf="@id/button2"
+        android:layout_below="@+id/txtResult"
+        app:layout_widthPercent="23%"
+        app:layout_heightPercent= "20%"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="2"
-                android:id="@+id/button2"
-                android:layout_column="1"
-                android:textSize="20sp"
-                android:onClick="buttonClick" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/buttonSum"
+        android:textSize="20sp"
+        android:onClick="buttonClick"
+        android:layout_toRightOf="@id/button3"
+        android:layout_below="@+id/txtResult"
+        app:layout_widthPercent="23%"
+        app:layout_heightPercent= "20%"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="3"
-                android:id="@+id/button3"
-                android:layout_column="2"
-                android:textSize="20sp"
-                android:onClick="buttonClick" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:id="@+id/button4"
+        android:textSize="20sp"
+        android:onClick="buttonClick"
+        android:layout_below="@+id/button1"
+        app:layout_widthPercent="23%"
+        app:layout_heightPercent= "20%"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="+"
-                android:id="@+id/buttonSum"
-                android:layout_column="3"
-                android:textSize="20sp"
-                android:onClick="buttonClick" />
-        </TableRow>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:id="@+id/button5"
+        android:textSize="20sp"
+        android:onClick="buttonClick"
+        android:layout_toRightOf="@id/button4"
+        android:layout_below="@+id/button2"
+        app:layout_widthPercent="23%"
+        app:layout_heightPercent= "20%"/>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/second_row"
-            android:layout_weight="1">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6"
+        android:id="@+id/button6"
+        android:textSize="20sp"
+        android:onClick="buttonClick"
+        android:layout_toRightOf="@id/button5"
+        android:layout_below="@+id/button3"
+        app:layout_widthPercent="23%"
+        app:layout_heightPercent= "20%"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="4"
-                android:id="@+id/button4"
-                android:layout_column="0"
-                android:textSize="20sp"
-                android:onClick="buttonClick" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/buttonSub"
+        android:textSize="20sp"
+        android:onClick="buttonClick"
+        android:layout_toRightOf="@id/button6"
+        android:layout_below="@+id/buttonSum"
+        app:layout_widthPercent="23%"
+        app:layout_heightPercent= "20%"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="5"
-                android:id="@+id/button5"
-                android:layout_column="1"
-                android:textSize="20sp"
-                android:onClick="buttonClick" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="6"
-                android:id="@+id/button6"
-                android:layout_column="2"
-                android:textSize="20sp"
-                android:onClick="buttonClick" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7"
+        android:id="@+id/button7"
+        android:textSize="20sp"
+        android:onClick="buttonClick"
+        android:layout_below="@+id/button4"
+        app:layout_widthPercent="23%"
+        app:layout_heightPercent= "20%"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="-"
-                android:id="@+id/buttonSub"
-                android:layout_column="3"
-                android:textSize="20sp"
-                android:onClick="buttonClick" />
-        </TableRow>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8"
+        android:id="@+id/button8"
+        android:textSize="20sp"
+        android:onClick="buttonClick"
+        android:layout_toRightOf="@id/button7"
+        android:layout_below="@+id/button5"
+        app:layout_widthPercent="23%"
+        app:layout_heightPercent= "20%"/>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/third_row"
-            android:layout_weight="1">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9"
+        android:id="@+id/button9"
+        android:textSize="20sp"
+        android:onClick="buttonClick"
+        android:layout_toRightOf="@id/button8"
+        android:layout_below="@+id/button6"
+        app:layout_widthPercent="23%"
+        app:layout_heightPercent= "20%"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="7"
-                android:id="@+id/button7"
-                android:layout_column="0"
-                android:textSize="20sp"
-                android:onClick="buttonClick" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:id="@+id/buttonMlt"
+        android:textSize="20sp"
+        android:onClick="buttonClick"
+        android:layout_toRightOf="@id/button9"
+        android:layout_below="@+id/buttonSub"
+        app:layout_widthPercent="23%"
+        app:layout_heightPercent= "20%"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="8"
-                android:id="@+id/button8"
-                android:layout_column="1"
-                android:textSize="20sp"
-                android:onClick="buttonClick" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C"
+        android:id="@+id/buttonC"
+        android:textSize="20sp"
+        android:onClick="buttonClick"
+        android:layout_below="@+id/button7"
+        app:layout_widthPercent="23%"
+        app:layout_heightPercent= "20%" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="9"
-                android:id="@+id/button9"
-                android:layout_column="2"
-                android:textSize="20sp"
-                android:onClick="buttonClick" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/button0"
+        android:textSize="20sp"
+        android:onClick="buttonClick"
+        android:layout_toRightOf="@id/buttonC"
+        android:layout_below="@+id/button8"
+        app:layout_widthPercent="23%"
+        app:layout_heightPercent= "20%" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="*"
-                android:id="@+id/buttonMlt"
-                android:layout_column="3"
-                android:textSize="20sp"
-                android:onClick="buttonClick" />
-        </TableRow>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:id="@+id/buttonEq"
+        android:textSize="20sp"
+        android:onClick="buttonClick"
+        android:layout_toRightOf="@id/button0"
+        android:layout_below="@+id/button9"
+        app:layout_widthPercent="23%"
+        app:layout_heightPercent= "20%"/>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/forth_row"
-            android:layout_weight="1">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:id="@+id/buttonDiv"
+        android:textSize="20sp"
+        android:onClick="buttonClick"
+        android:layout_toRightOf="@id/buttonEq"
+        android:layout_below="@+id/buttonMlt"
+        app:layout_widthPercent="23%"
+        app:layout_heightPercent= "20%"/>
+</android.support.percent.PercentRelativeLayout>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="C"
-                android:id="@+id/buttonC"
-                android:layout_column="0"
-                android:textSize="20sp"
-                android:onClick="buttonClick" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="0"
-                android:id="@+id/button0"
-                android:layout_column="1"
-                android:textSize="20sp"
-                android:onClick="buttonClick" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="="
-                android:id="@+id/buttonEq"
-                android:layout_column="2"
-                android:textSize="20sp"
-                android:onClick="buttonClick" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="/"
-                android:id="@+id/buttonDiv"
-                android:layout_column="3"
-                android:textSize="20sp"
-                android:onClick="buttonClick" />
-        </TableRow>
-
-    </TableLayout>
-
-</RelativeLayout>
