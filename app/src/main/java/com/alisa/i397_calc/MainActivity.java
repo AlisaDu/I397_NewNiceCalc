@@ -38,10 +38,10 @@ public class MainActivity extends AppCompatActivity {
         screen = (EditText) findViewById(R.id.txtResult);
 
         if (savedInstanceState != null){
-            input.put(ExpElement.FIRST_OPERAND, savedInstanceState.getString("fop"));
-            input.put(ExpElement.OPERATOR, savedInstanceState.getString("oper"));
-            input.put(ExpElement.SECOND_OPERAND, savedInstanceState.getString("sop"));
-            operation = (MathOperation) savedInstanceState.getSerializable("mathop");
+            if((savedInstanceState.getString("operationString")) !=null) {
+                operation = MathOperation.valueOf(savedInstanceState.getString("operationString"));
+            }
+            input = (EnumMap) savedInstanceState.getSerializable("inputMap");
 
         }
         screen.setText(dflt);
@@ -49,10 +49,6 @@ public class MainActivity extends AppCompatActivity {
         btnSub = (Button) findViewById(R.id.buttonSub);
         btnMlt = (Button) findViewById(R.id. buttonMlt);
         btnDiv = (Button) findViewById(R.id. buttonDiv);
-
-
-
-
 
         btnSum.setTag(MathOperation.SUM);
         btnSub.setTag(MathOperation.SUB);
@@ -64,15 +60,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState){
-        super.onSaveInstanceState(savedInstanceState);
-
-        String fop =  (String)input.get(ExpElement.FIRST_OPERAND);
-        String oper =  (String)input.get(ExpElement.OPERATOR);
-        String sop =  (String )input.get(ExpElement.SECOND_OPERAND);
-        savedInstanceState.putString ("fop", fop);
-        savedInstanceState.putString ("oper", oper);
-        savedInstanceState.putString("sop", sop);
-        savedInstanceState.putSerializable("mathop", operation);
+        if (operation != null) {
+            super.onSaveInstanceState(savedInstanceState);
+            String operationString = operation.name();
+            savedInstanceState.putString("operationString", operationString);
+        }
+        savedInstanceState.putSerializable("inputMap", input);
 
     }
 
