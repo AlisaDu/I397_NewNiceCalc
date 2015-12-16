@@ -1,4 +1,4 @@
-package com.alisa.i397_calc;
+package com.alisa.i397_nicecalc;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
