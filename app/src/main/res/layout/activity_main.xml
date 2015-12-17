@@ -10,7 +10,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     tools:context=".MainActivity"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@color/colorBackground">
 
 
     <EditText
@@ -21,108 +22,135 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:textAlignment="viewEnd"
         android:cursorVisible="false"
         android:focusable="false"
         android:inputType="number|text|numberDecimal"
         android:gravity="bottom|right"
-        app:layout_widthPercent="90%"
-        app:layout_heightPercent= "20%"/>
+        app:layout_widthPercent="100%"
+        app:layout_heightPercent= "20%"
+        android:typeface="serif"
+        android:singleLine="true"
+        android:background="@color/colorBackground" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
         android:id="@+id/button1"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:onClick="buttonClick"
         android:layout_below="@+id/txtResult"
-        app:layout_widthPercent="23%"
-        app:layout_heightPercent= "20%"/>
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent= "20%"
+        android:background="@color/colorBtnNumeric"
+        android:typeface="serif"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2"
         android:id="@+id/button2"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:onClick="buttonClick"
         android:layout_toRightOf="@id/button1"
         android:layout_below="@+id/txtResult"
-        app:layout_widthPercent="23%"
-        app:layout_heightPercent= "20%"/>
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent= "20%"
+        android:background="@color/colorBtnNumeric"
+        android:typeface="serif"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="3"
         android:id="@+id/button3"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:onClick="buttonClick"
         android:layout_toRightOf="@id/button2"
         android:layout_below="@+id/txtResult"
-        app:layout_widthPercent="23%"
-        app:layout_heightPercent= "20%"/>
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent= "20%"
+        android:background="@color/colorBtnNumeric"
+        android:typeface="serif"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+"
         android:id="@+id/buttonSum"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:onClick="buttonClick"
         android:layout_toRightOf="@id/button3"
         android:layout_below="@+id/txtResult"
-        app:layout_widthPercent="23%"
-        app:layout_heightPercent= "20%"/>
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent= "20%"
+        android:background="@color/colorBtnOp"
+        android:typeface="serif"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="4"
         android:id="@+id/button4"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:onClick="buttonClick"
         android:layout_below="@+id/button1"
-        app:layout_widthPercent="23%"
-        app:layout_heightPercent= "20%"/>
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent= "20%"
+        android:background="@color/colorBtnNumeric"
+        android:typeface="serif"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="5"
         android:id="@+id/button5"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:onClick="buttonClick"
         android:layout_toRightOf="@id/button4"
         android:layout_below="@+id/button2"
-        app:layout_widthPercent="23%"
-        app:layout_heightPercent= "20%"/>
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent= "20%"
+        android:background="@color/colorBtnNumeric"
+        android:typeface="serif"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="6"
         android:id="@+id/button6"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:onClick="buttonClick"
         android:layout_toRightOf="@id/button5"
         android:layout_below="@+id/button3"
-        app:layout_widthPercent="23%"
-        app:layout_heightPercent= "20%"/>
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent= "20%"
+        android:background="@color/colorBtnNumeric"
+        android:typeface="serif"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="-"
         android:id="@+id/buttonSub"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:onClick="buttonClick"
         android:layout_toRightOf="@id/button6"
         android:layout_below="@+id/buttonSum"
-        app:layout_widthPercent="23%"
-        app:layout_heightPercent= "20%"/>
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent= "20%"
+        android:background="@color/colorBtnOp"
+        android:typeface="serif"
+        android:textStyle="bold" />
 
 
     <Button
@@ -130,93 +158,117 @@
         android:layout_height="wrap_content"
         android:text="7"
         android:id="@+id/button7"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:onClick="buttonClick"
         android:layout_below="@+id/button4"
-        app:layout_widthPercent="23%"
-        app:layout_heightPercent= "20%"/>
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent= "20%"
+        android:background="@color/colorBtnNumeric"
+        android:typeface="serif"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="8"
         android:id="@+id/button8"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:onClick="buttonClick"
         android:layout_toRightOf="@id/button7"
         android:layout_below="@+id/button5"
-        app:layout_widthPercent="23%"
-        app:layout_heightPercent= "20%"/>
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent= "20%"
+        android:background="@color/colorBtnNumeric"
+        android:typeface="serif"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="9"
         android:id="@+id/button9"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:onClick="buttonClick"
         android:layout_toRightOf="@id/button8"
         android:layout_below="@+id/button6"
-        app:layout_widthPercent="23%"
-        app:layout_heightPercent= "20%"/>
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent= "20%"
+        android:background="@color/colorBtnNumeric"
+        android:typeface="serif"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="*"
         android:id="@+id/buttonMlt"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:onClick="buttonClick"
         android:layout_toRightOf="@id/button9"
         android:layout_below="@+id/buttonSub"
-        app:layout_widthPercent="23%"
-        app:layout_heightPercent= "20%"/>
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent= "20%"
+        android:background="@color/colorBtnOp"
+        android:typeface="serif"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="C"
         android:id="@+id/buttonC"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:onClick="buttonClick"
         android:layout_below="@+id/button7"
-        app:layout_widthPercent="23%"
-        app:layout_heightPercent= "20%" />
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent= "20%"
+        android:background="@color/colorBtnOp"
+        android:typeface="serif"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
         android:id="@+id/button0"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:onClick="buttonClick"
         android:layout_toRightOf="@id/buttonC"
         android:layout_below="@+id/button8"
-        app:layout_widthPercent="23%"
-        app:layout_heightPercent= "20%" />
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent= "20%"
+        android:background="@color/colorBtnNumeric"
+        android:typeface="serif"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="="
         android:id="@+id/buttonEq"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:onClick="buttonClick"
         android:layout_toRightOf="@id/button0"
         android:layout_below="@+id/button9"
-        app:layout_widthPercent="23%"
-        app:layout_heightPercent= "20%"/>
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent= "20%"
+        android:background="@color/colorBtnOp"
+        android:typeface="serif"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="/"
         android:id="@+id/buttonDiv"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:onClick="buttonClick"
         android:layout_toRightOf="@id/buttonEq"
         android:layout_below="@+id/buttonMlt"
-        app:layout_widthPercent="23%"
-        app:layout_heightPercent= "20%"/>
+        app:layout_widthPercent="25%"
+        app:layout_heightPercent= "20%"
+        android:background="@color/colorBtnOp"
+        android:typeface="serif"
+        android:textStyle="bold" />
 </android.support.percent.PercentRelativeLayout>
 

@@ -3,6 +3,9 @@ package com.alisa.i397_nicecalc;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     double value = 0;
     String operation = "";
     boolean operationPressed = false;
+    private Animation animation;
 
 
     @Override
@@ -33,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         screen = (EditText) findViewById(R.id.txtResult);
+
+        animation = AnimationUtils.loadAnimation(this, R.anim.button_anim);
+
 
         if (savedInstanceState != null){
             value =savedInstanceState.getDouble("value");
@@ -67,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.buttonSub:
             case R.id.buttonMlt:
             case R.id.buttonDiv: {
+                view.startAnimation(animation);
                 Button b = (Button)view;
 
                  if (value != 0){
@@ -85,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             case R.id.buttonC:{
+                view.startAnimation(animation);
                 screen.setText(dflt);
                 value = 0;
                 operation = "";
@@ -95,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             case R.id.buttonEq:{
+                view.startAnimation(animation);
                 switch (operation){
 
                     case "+":{
@@ -127,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
 
             // all numeric buttons
             default:{
+                view.startAnimation(animation);
 
                 Button b = (Button)view;
 
