@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttonClick (View view){
+        screen.setSelected(true);
         switch (view.getId()){
             // any math operation button
             case R.id.buttonSum:
@@ -93,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             case R.id.buttonC:{
+                screen.setSelected(false);
                 view.startAnimation(animation);
                 screen.setText(dflt);
                 value = 0;
@@ -142,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
                 Button b = (Button)view;
 
                 // in case of new input, start from scratch
-                if ((String.valueOf(screen.getText()).equals(getResources().getString(R.string.dflt))) || (operationPressed == true)) {
+                if ((String.valueOf(screen.getText()).equals(getResources().getString(R.string.dflt))) ||(String.valueOf(screen.getText()).equals(getResources().getString(R.string.zero)))|| (operationPressed == true)) {
                     operationPressed = false;
                     screen.setText("");
                 }
